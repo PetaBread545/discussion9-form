@@ -1,5 +1,32 @@
   /* Create an accessible color palette using var()function */
   /* https://www.w3schools.com/css/css3_variables.asp */
+
+
+  body, button, form {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:bold;
+    font-style: normal;
+  }
+
+  #reset{
+    background-color: rgb(255, 149, 149);
+  }
+
+  #reset:hover{
+     background-color: rgb(255, 115, 115);
+  }
+  :root{
+    --blue1: #bfe4ef;
+    --black: #1a1a1a;
+    --blue: #8dc4fc;
+    --blue3: #003c52;
+  }
+
+  .labels{
+    font-size: larger;
+    font-weight: bolder;
+  }
   
   form {
     display: grid;
@@ -10,15 +37,15 @@
     margin: 20px auto;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    color: #702082;
-    background: #CFC096;
+    color: var(--black);
+    background: var(--blue);
   }
 
   .radio {
     grid-column-start: 1;
     grid-column-end: 3;
     /* background: #575294; */
-    color: #702082;
+    color: var(--blue3);
   }
 
   #name {
@@ -26,14 +53,16 @@
     padding: 10px;
     font-size: 18px;
     font-weight: bold;
-    background: #CFC096;
-    color: #9B9A6D;
+    background: var(--blue1);
+    color: var(--black);
   }
 
   #message {
     width: 100%;
     padding: 10px;
     resize: vertical;
+    background: var(--blue1);
+    color: var(--black);
   }
 
   input,
@@ -55,4 +84,11 @@
 
   input[type="submit"]:hover {
     background-color: #45a049;
+  }
+
+  #header{
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 15px;
   }
